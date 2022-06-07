@@ -1,0 +1,15 @@
+.layoutContainer {
+  display: flex;
+}
+
+.left-side {
+  width: 40%;
+  height: 80vh;
+  border: solid 1px black;
+}
+
+.right-side {
+  width: 60%;
+  height: 80vh;
+  border: solid 1px black;
+}
