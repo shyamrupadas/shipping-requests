@@ -52,9 +52,12 @@ export const ShippingRequestsTable = () => {
     },
   ];
 
-  const handleRowClick = useCallback((id?: string) => {
-    dispatch(setCurrentRequestId(id));
-  }, []);
+  const handleRowClick = useCallback(
+    (id?: string) => {
+      dispatch(setCurrentRequestId(id));
+    },
+    [dispatch]
+  );
 
   return (
     <div className="tableContainer">

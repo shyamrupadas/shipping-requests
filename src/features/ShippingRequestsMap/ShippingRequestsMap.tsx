@@ -16,12 +16,12 @@ export const ShippingRequestsMap = () => {
 
   useEffect(() => {
     dispatch(getRequestPoints());
-  }, []);
+  }, [dispatch]);
 
   useEffect(() => {
     if (currentRequest)
       dispatch(getCurrentRequestPoints(currentRequest.pointIds));
-  }, [currentRequest?.pointIds]);
+  }, [currentRequest, dispatch]);
 
   return (
     <MapContainer
@@ -33,8 +33,8 @@ export const ShippingRequestsMap = () => {
         attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
         url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
       />
-      {currentRequestPoints.map((point) => (
-        <Marker key={point.id} position={point.position}>
+      {currentRequestPoints.map((point, index) => (
+        <Marker key={index} position={point.position}>
           <Popup>{point.tittle}</Popup>
         </Marker>
       ))}
