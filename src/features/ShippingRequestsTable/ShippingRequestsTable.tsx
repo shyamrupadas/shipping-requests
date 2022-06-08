@@ -7,6 +7,8 @@ import {
   selectRequests,
   setCurrentRequestId,
 } from "./shippingRequestsListSlice";
+import { selectPoints } from "../RequestPoints/requestPointsSlice";
+import { PointSelect } from "../../component/PointSelect/PointSelect";
 
 interface DataType {
   id?: string;
@@ -14,35 +16,41 @@ interface DataType {
   pointIds: string[];
 }
 
-const columns: ColumnsType<DataType> = [
-  {
-    title: "#",
-    dataIndex: "id",
-    key: "id",
-  },
-  {
-    title: "Title",
-    dataIndex: "title",
-    key: "title",
-  },
-  {
-    title: "Points",
-    key: "pointIds",
-    dataIndex: "pointIds",
-    render: (_, { pointIds }) => (
-      <>
-        {pointIds.map((id) => (
-          <span key={id}>{id} </span>
-        ))}
-      </>
-    ),
-  },
-];
-
 export const ShippingRequestsTable = () => {
   const orders = useAppSelector(selectRequests);
+  const points = useAppSelector(selectPoints);
 
   const dispatch = useAppDispatch();
+
+  const columns: ColumnsType<DataType> = [
+    {
+      title: "#",
+      dataIndex: "id",
+      key: "id",
+    },
+    {
+      title: "Title",
+      dataIndex: "title",
+      key: "title",
+    },
+    {
+      title: "Points",
+      key: "pointIds",
+      dataIndex: "pointIds",
+      render: (_, { pointIds }) => (
+        <>
+          {pointIds.map((id, index) => (
+            <PointSelect
+              key={index}
+              points={points}
+              currentPoint={id}
+              index={index}
+            />
+          ))}
+        </>
+      ),
+    },
+  ];
 
   const handleRowClick = useCallback((id?: string) => {
     dispatch(setCurrentRequestId(id));

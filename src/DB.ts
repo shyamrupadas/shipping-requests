@@ -15,6 +15,6 @@ export const POINTS: PointsType[] = [
   { id: "6", position: [55.795, 37.570865], tittle: "point 6" },
   { id: "7", position: [55.605, 37.540865], tittle: "point 7" },
   { id: "8", position: [55.745, 37.550865], tittle: "point 8" },
-  { id: "9", position: [55.755, 37.570865], tittle: "point 9" },
+  { id: "9", position: [55.755, 37.520865], tittle: "point 9" },
   { id: "10", position: [55.765, 37.590865], tittle: "point 10" },
 ];

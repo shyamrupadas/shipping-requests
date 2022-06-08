@@ -6,7 +6,7 @@ import { fetchCurrentRequestPoints } from "./shipppingRequestsAPI";
 interface PointsType {
   id: string;
   position: LatLngExpression;
-  popup: string;
+  tittle: string;
 }
 
 export interface shippingRequestState {
