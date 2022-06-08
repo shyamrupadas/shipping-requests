@@ -61,7 +61,6 @@ export const ShippingRequestsTable = () => {
           };
         }}
       />
-      ;
     </div>
   );
 };

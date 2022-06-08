@@ -8,3 +8,7 @@ export const fetchCurrentRequestPoints = (ids: string[]) => {
     )
   );
 };
+
+export const fetchRequestPoints = () => {
+  return new Promise((resolve) => setTimeout(() => resolve(POINTS), 200));
+};
