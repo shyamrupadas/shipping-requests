@@ -6,10 +6,10 @@ import "./ShippingRequestsLayout.css";
 export const ShippingRequestsLayout = () => {
   return (
     <div className="layoutContainer">
-      <div className="left-side">
+      <div className="requestsContainer">
         <ShippingRequestsTable />
       </div>
-      <div className="right-side">
+      <div className="mapContainer">
         <ShippingRequestsMap />
       </div>
     </div>

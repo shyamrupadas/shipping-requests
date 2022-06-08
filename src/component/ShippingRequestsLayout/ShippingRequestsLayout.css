@@ -1,15 +1,18 @@
 .layoutContainer {
   display: flex;
+  justify-content: center;
+  margin: 40px auto;
+  max-width: 90%;
 }
 
-.left-side {
-  width: 40%;
-  height: 80vh;
+.requestsContainer {
+  width: 50%;
+  height: 600px;
   border: solid 1px black;
 }
 
-.right-side {
-  width: 60%;
-  height: 80vh;
+.mapContainer {
+  width: 50%;
+  height: 600px;
   border: solid 1px black;
 }

@@ -1,3 +1,5 @@
+import { LatLngExpression } from "leaflet";
+
 export const ORDERS = [
   {
     id: "1",
@@ -21,10 +23,16 @@ export const ORDERS = [
   },
 ];
 
-export const POINTS = [
-  { id: "1", data: {} },
-  { id: "2", data: {} },
-  { id: "3", data: {} },
-  { id: "4", data: {} },
-  { id: "5", data: {} },
+interface PointsType {
+  id: string;
+  position: LatLngExpression;
+  popup: string;
+}
+
+export const POINTS: PointsType[] = [
+  { id: "1", position: [55.705, 37.530865], popup: "popup text" },
+  { id: "2", position: [55.725, 37.540865], popup: "popup text" },
+  { id: "3", position: [55.745, 37.550865], popup: "popup text" },
+  { id: "4", position: [55.755, 37.570865], popup: "popup text" },
+  { id: "5", position: [55.765, 37.590865], popup: "popup text" },
 ];
