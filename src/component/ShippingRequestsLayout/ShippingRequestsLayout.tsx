@@ -1,6 +1,6 @@
 import React from "react";
-import { ShippingRequestsTable } from "../ShippingRequestsTable";
-import { ShippingRequestsMap } from "../ShippingRequestsMap";
+import { ShippingRequestsTable } from "../../features/ShippingRequestsTable";
+import { ShippingRequestsMap } from "../../features/ShippingRequestsMap";
 import "./ShippingRequestsLayout.css";
 
 export const ShippingRequestsLayout = () => {

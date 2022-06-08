@@ -1,9 +1,11 @@
-import { configureStore, ThunkAction, Action } from '@reduxjs/toolkit';
-import counterReducer from '../features/counter/counterSlice';
+import { Action, configureStore, ThunkAction } from "@reduxjs/toolkit";
+import shippingRequestsListReducer from "../features/ShippingRequestsTable/shippingRequestsListSlice";
+import requestPointsReducer from "../features/RequestPoints/requestPointsSlice";
 
 export const store = configureStore({
   reducer: {
-    counter: counterReducer,
+    shippingRequests: shippingRequestsListReducer,
+    requestPoints: requestPointsReducer,
   },
 });
 
